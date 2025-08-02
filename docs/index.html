@@ -3,13 +3,332 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Anuva Taru Silver - Handcrafted Jewelry</title>
-    <meta http-equiv="refresh" content="0; url=../public/index.html" />
-    <link rel="canonical" href="../public/index.html" />
+    <title>Anuva Taru Silver - Handcrafted Silver Jewelry</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <p>
-      Redirecting to <a href="../public/index.html">Anuva Taru Silver</a>...
-    </p>
+    <header class="header">
+      <nav class="navbar">
+        <div class="nav-container">
+          <div class="nav-logo">
+            <a href="/" class="logo-link" aria-label="Anuva Taru Silver Home">
+              <img
+                src="images/logo.png"
+                alt="Anuva Taru Silver Logo"
+                class="logo-img"
+                onerror="this.style.display='none'"
+              />
+              <span class="logo-text"> AnuvaTaru Silver </span>
+            </a>
+          </div>
+          <ul class="nav-menu">
+            <li class="nav-item">
+              <a href="index.html" class="nav-link active">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="catalog.html" class="nav-link">Catalog</a>
+            </li>
+            <li class="nav-item">
+              <a href="gallery.html" class="nav-link">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a href="contact.html" class="nav-link">Contact</a>
+            </li>
+          </ul>
+          <div class="nav-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="hero">
+        <!-- SVG Background -->
+        <svg class="hero-background-svg" viewBox="0 0 1200 400" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+          <!-- Background gradient -->
+          <defs>
+            <linearGradient id="silverGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#f8f6f0;stop-opacity:0.9" />
+              <stop offset="50%" style="stop-color:#e8e8e8;stop-opacity:0.8" />
+              <stop offset="100%" style="stop-color:#d5d5d5;stop-opacity:0.7" />
+            </linearGradient>
+            <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#d4af37;stop-opacity:0.8" />
+              <stop offset="100%" style="stop-color:#b87333;stop-opacity:0.8" />
+            </linearGradient>
+            <radialGradient id="jewelGlow" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" style="stop-color:#d4af37;stop-opacity:0.6" />
+              <stop offset="100%" style="stop-color:#d4af37;stop-opacity:0.1" />
+            </radialGradient>
+            <!-- Pattern for traditional motifs -->
+            <pattern id="traditionalPattern" patternUnits="userSpaceOnUse" width="80" height="80">
+              <circle cx="40" cy="40" r="3" fill="#e8e8e8" opacity="0.3"/>
+              <path d="M40 20 L60 40 L40 60 L20 40 Z" fill="none" stroke="#d5d5d5" stroke-width="1" opacity="0.4"/>
+            </pattern>
+          </defs>
+          
+          <!-- Background -->
+          <rect width="1200" height="400" fill="url(#silverGradient)"/>
+          <rect width="1200" height="400" fill="url(#traditionalPattern)" opacity="0.2"/>
+          
+          <!-- Traditional jewelry elements distributed across the banner -->
+          <!-- Left side jewelry -->
+          <g transform="translate(200, 120)" opacity="0.7">
+            <!-- Necklace chain -->
+            <path d="M -80 0 Q -40 -15 0 0 Q 40 15 80 0" 
+                  stroke="url(#goldGradient)" stroke-width="2" fill="none"/>
+            
+            <!-- Pendant -->
+            <g transform="translate(0, 30)">
+              <circle cx="0" cy="0" r="20" fill="url(#jewelGlow)"/>
+              <circle cx="0" cy="0" r="15" fill="none" stroke="url(#goldGradient)" stroke-width="2"/>
+              <circle cx="0" cy="0" r="8" fill="url(#goldGradient)"/>
+            </g>
+          </g>
+          
+          <!-- Right side jewelry -->
+          <g transform="translate(1000, 120)" opacity="0.7">
+            <!-- Earrings pair -->
+            <g transform="translate(-30, 0)">
+              <circle cx="0" cy="0" r="10" fill="url(#goldGradient)"/>
+              <path d="M 0 10 L -6 20 L 6 20 Z" fill="url(#goldGradient)"/>
+            </g>
+            <g transform="translate(30, 0)">
+              <circle cx="0" cy="0" r="10" fill="url(#goldGradient)"/>
+              <path d="M 0 10 L -6 20 L 6 20 Z" fill="url(#goldGradient)"/>
+            </g>
+          </g>
+          
+          <!-- Center decorative elements -->
+          <g transform="translate(600, 80)" opacity="0.5">
+            <circle cx="0" cy="0" r="25" fill="url(#jewelGlow)"/>
+            <path d="M -15 -15 L 15 -15 L 15 15 L -15 15 Z" fill="none" stroke="url(#goldGradient)" stroke-width="2"/>
+            <circle cx="0" cy="0" r="8" fill="url(#goldGradient)"/>
+          </g>
+          
+          <!-- Bottom bracelet design -->
+          <g transform="translate(600, 320)" opacity="0.6">
+            <ellipse cx="0" cy="0" rx="150" ry="20" fill="none" stroke="url(#goldGradient)" stroke-width="3"/>
+            <!-- Bracelet gems -->
+            <circle cx="-100" cy="0" r="8" fill="url(#goldGradient)"/>
+            <circle cx="-50" cy="-10" r="6" fill="url(#goldGradient)"/>
+            <circle cx="0" cy="-12" r="10" fill="url(#goldGradient)"/>
+            <circle cx="50" cy="-10" r="6" fill="url(#goldGradient)"/>
+            <circle cx="100" cy="0" r="8" fill="url(#goldGradient)"/>
+          </g>
+          
+          <!-- Corner decorative motifs -->
+          <g transform="translate(100, 60)" opacity="0.4">
+            <path d="M 0 0 L 15 -20 L 30 0 L 15 20 Z" fill="url(#goldGradient)"/>
+          </g>
+          
+          <g transform="translate(1100, 340)" opacity="0.4">
+            <path d="M 0 0 L 15 -20 L 30 0 L 15 20 Z" fill="url(#goldGradient)"/>
+          </g>
+          
+          <!-- Scattered rings -->
+          <g transform="translate(300, 280)" opacity="0.5">
+            <circle cx="0" cy="0" r="12" fill="none" stroke="url(#goldGradient)" stroke-width="2"/>
+            <circle cx="0" cy="0" r="6" fill="url(#goldGradient)"/>
+          </g>
+          
+          <g transform="translate(900, 200)" opacity="0.5">
+            <circle cx="0" cy="0" r="12" fill="none" stroke="url(#goldGradient)" stroke-width="2"/>
+            <circle cx="0" cy="0" r="6" fill="url(#goldGradient)"/>
+          </g>
+          
+          <!-- Subtle sparkle effects -->
+          <g opacity="0.6">
+            <circle cx="150" cy="100" r="3" fill="#d4af37">
+              <animate attributeName="opacity" values="0.3;1;0.3" dur="4s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="1050" cy="150" r="2" fill="#d4af37">
+              <animate attributeName="opacity" values="0.5;1;0.5" dur="3s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="400" cy="350" r="2.5" fill="#d4af37">
+              <animate attributeName="opacity" values="0.2;0.8;0.2" dur="5s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="800" cy="80" r="2" fill="#d4af37">
+              <animate attributeName="opacity" values="0.4;1;0.4" dur="3.5s" repeatCount="indefinite"/>
+            </circle>
+          </g>
+        </svg>
+
+        <div class="hero-content">
+          <div class="hero-text">
+            <h1 class="hero-title">Traditional Handcrafted Silver Artistry</h1>
+            <p class="hero-subtitle">
+              Discover our heritage collection of authentic Indian silver jewelry, 
+              where centuries-old traditions meet contemporary elegance
+            </p>
+            <div class="hero-buttons">
+              <a href="/catalog" class="btn btn-primary">Explore Heritage Collection</a>
+              <a href="/gallery" class="btn btn-secondary">View Artisan Gallery</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Featured Products -->
+      <section class="featured-products">
+        <div class="container">
+          <h2 class="section-title jewelry-accent">Heritage Collection</h2>
+          <div class="products-grid" id="featured-products">
+            <!-- Featured products will be loaded here -->
+            <div class="loading">Curating our finest traditional pieces...</div>
+          </div>
+          <div class="text-center">
+            <a href="/catalog" class="btn btn-outline">Explore Full Collection</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section class="about">
+        <div class="container">
+          <div class="about-content">
+            <div class="about-text">
+              <h2>Ancient Artistry, Modern Grace</h2>
+              <p>
+                At Anuva Taru Silver, we honor the sacred traditions of Indian silversmithing 
+                passed down through generations. Each piece in our collection carries the 
+                essence of our rich cultural heritage, meticulously handcrafted by master 
+                artisans who have perfected their craft over decades.
+              </p>
+              <p>
+                From intricate temple jewelry to contemporary fusion pieces, our collection 
+                bridges the gap between timeless tradition and modern sophistication, 
+                ensuring that every ornament tells a story of India's glorious past.
+              </p>
+              </p>
+              <div class="features">
+                <div class="feature">
+                  <i class="fas fa-hand-holding-heart"></i>
+                  <h3>Heritage Craftsmanship</h3>
+                  <p>Each piece represents centuries of traditional Indian silversmithing techniques</p>
+                </div>
+                <div class="feature">
+                  <i class="fas fa-certificate"></i>
+                  <h3>Pure 925 Silver</h3>
+                  <p>Authentic sterling silver sourced and crafted with uncompromising quality</p>
+                </div>
+                <div class="feature">
+                  <i class="fas fa-palette"></i>
+                  <h3>Traditional Motifs</h3>
+                  <p>Authentic Indian designs featuring temple patterns, nature motifs, and cultural symbols</p>
+                </div>
+              </div>
+            </div>
+            <div class="about-image">
+              <img src="/public/images/craftsman.jpg" alt="Traditional Jewelry Crafting" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Categories Section -->
+      <section class="categories">
+        <div class="container">
+          <h2 class="section-title jewelry-accent">Traditional Categories</h2>
+          <div class="categories-grid">
+            <div class="category-card" data-category="rings">
+              <img src="/public/images/category-rings.jpg" alt="Traditional Silver Rings" />
+              <div class="category-overlay">
+                <h3>Heritage Rings</h3>
+                <p>Classic Indian silver rings with traditional motifs</p>
+              </div>
+            </div>
+            <div class="category-card" data-category="necklaces">
+              <img
+                src="/public/images/category-necklaces.jpg"
+                alt="Traditional Silver Necklaces"
+              />
+              <div class="category-overlay">
+                <h3>Necklaces</h3>
+                <p>Beautiful necklaces to complement your style</p>
+                <h3>Temple Necklaces</h3>
+                <p>Sacred designs inspired by ancient temple architecture</p>
+              </div>
+            </div>
+            <div class="category-card" data-category="earrings">
+              <img src="/public/images/category-earrings.jpg" alt="Traditional Silver Earrings" />
+              <div class="category-overlay">
+                <h3>Chandelier Earrings</h3>
+                <p>Elaborate traditional earrings for festive occasions</p>
+              </div>
+            </div>
+            <div class="category-card" data-category="bracelets">
+              <img
+                src="/public/images/category-bracelets.jpg"
+                alt="Traditional Silver Bracelets"
+              />
+              <div class="category-overlay">
+                <h3>Kada & Bangles</h3>
+                <p>Traditional Indian silver bracelets and kada designs</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3><i class="fas fa-gem"></i> Anuva Taru Silver</h3>
+            <p>
+              Preserving the ancient art of Indian silversmithing while creating 
+              heirloom pieces for modern generations. Each creation carries the 
+              soul of traditional craftsmanship.
+            </p>
+            <div class="social-links">
+              <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+              <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+            </div>
+          </div>
+          <div class="footer-section">
+            <h4>Heritage Collection</h4>
+            <ul>
+              <li><a href="/">Traditional Home</a></li>
+              <li><a href="/catalog">Artisan Catalog</a></li>
+              <li><a href="/gallery">Heritage Gallery</a></li>
+              <li><a href="/contact">Connect with Artisans</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Traditional Categories</h4>
+            <ul>
+              <li><a href="/catalog?category=rings">Heritage Rings</a></li>
+              <li><a href="/catalog?category=necklaces">Temple Necklaces</a></li>
+              <li><a href="/catalog?category=earrings">Chandelier Earrings</a></li>
+              <li><a href="/catalog?category=bracelets">Kada & Bangles</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Artisan Contact</h4>
+            <div class="contact-info">
+              <p><i class="fas fa-envelope"></i> heritage@anuvataru.com</p>
+              <p><i class="fas fa-phone"></i> +91 (555) 123-4567</p>
+              <p><i class="fas fa-map-marker-alt"></i> Traditional Craft District, India</p>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2024 Anuva Taru Silver - Preserving Heritage, Creating Legacy</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/public/js/main.js"></script>
   </body>
 </html>
