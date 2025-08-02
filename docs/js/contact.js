@@ -26,25 +26,14 @@ async function handleContactSubmission(e) {
   submitButton.disabled = true;
 
   try {
-    const response = await fetch("/api/contact", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    });
+    // For GitHub Pages - show demo message instead of actual submission
+    await new Promise((resolve) => setTimeout(resolve, 1500)); // Simulate loading
 
-    const result = await response.json();
-
-    if (response.ok) {
-      showFormMessage(
-        "Thank you for your message! We'll get back to you soon.",
-        "success"
-      );
-      form.reset();
-    } else {
-      throw new Error(result.message || "Something went wrong");
-    }
+    showFormMessage(
+      "Demo Mode: Contact form is working! In the full version, your message would be sent to our artisans who will respond within 24 hours.",
+      "success"
+    );
+    form.reset();
   } catch (error) {
     console.error("Error submitting contact form:", error);
     showFormMessage(

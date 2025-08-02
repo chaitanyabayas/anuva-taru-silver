@@ -15,8 +15,71 @@ document.addEventListener("DOMContentLoaded", function () {
 
 async function loadProducts() {
   try {
-    const response = await fetch("/api/products");
-    allProducts = await response.json();
+    // Static sample data for GitHub Pages
+    allProducts = [
+      {
+        id: 1,
+        name: "Heritage Temple Ring",
+        category: "rings",
+        price: 2500,
+        description:
+          "Traditional temple-inspired silver ring with intricate carvings",
+        images: ["images/logo.png"],
+        isVisible: true,
+        isFeatured: true,
+      },
+      {
+        id: 2,
+        name: "Classic Chandelier Earrings",
+        category: "earrings",
+        price: 4200,
+        description:
+          "Elaborate traditional earrings perfect for festive occasions",
+        images: ["images/logo.png"],
+        isVisible: true,
+        isFeatured: true,
+      },
+      {
+        id: 3,
+        name: "Sacred Temple Necklace",
+        category: "necklaces",
+        price: 8500,
+        description: "Ornate temple-style necklace with traditional motifs",
+        images: ["images/logo.png"],
+        isVisible: true,
+        isFeatured: false,
+      },
+      {
+        id: 4,
+        name: "Traditional Kada Bracelet",
+        category: "bracelets",
+        price: 3200,
+        description: "Heavy traditional silver kada with embossed patterns",
+        images: ["images/logo.png"],
+        isVisible: true,
+        isFeatured: true,
+      },
+      {
+        id: 5,
+        name: "Lotus Petal Ring",
+        category: "rings",
+        price: 1800,
+        description: "Delicate lotus-inspired ring symbolizing purity",
+        images: ["images/logo.png"],
+        isVisible: true,
+        isFeatured: false,
+      },
+      {
+        id: 6,
+        name: "Peacock Feather Earrings",
+        category: "earrings",
+        price: 3600,
+        description: "Beautiful peacock-inspired traditional earrings",
+        images: ["images/logo.png"],
+        isVisible: true,
+        isFeatured: true,
+      },
+    ];
     filteredProducts = [...allProducts];
 
     displayProducts(filteredProducts);

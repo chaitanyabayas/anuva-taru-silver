@@ -39,8 +39,67 @@ window.openGalleryModal = openGalleryModal;
 
 async function loadGalleryItems() {
   try {
-    const response = await fetch("/api/products");
-    const products = await response.json();
+    // Static sample data for GitHub Pages
+    const products = [
+      {
+        id: 1,
+        name: "Heritage Temple Ring",
+        category: "rings",
+        description:
+          "Traditional temple-inspired silver ring with intricate carvings",
+        image_url: "images/logo.png",
+      },
+      {
+        id: 2,
+        name: "Classic Chandelier Earrings",
+        category: "earrings",
+        description:
+          "Elaborate traditional earrings perfect for festive occasions",
+        image_url: "images/logo.png",
+      },
+      {
+        id: 3,
+        name: "Sacred Temple Necklace",
+        category: "necklaces",
+        description: "Ornate temple-style necklace with traditional motifs",
+        image_url: "images/logo.png",
+      },
+      {
+        id: 4,
+        name: "Traditional Kada Bracelet",
+        category: "bracelets",
+        description: "Heavy traditional silver kada with embossed patterns",
+        image_url: "images/logo.png",
+      },
+      {
+        id: 5,
+        name: "Lotus Petal Ring",
+        category: "rings",
+        description: "Delicate lotus-inspired ring symbolizing purity",
+        image_url: "images/logo.png",
+      },
+      {
+        id: 6,
+        name: "Peacock Feather Earrings",
+        category: "earrings",
+        description: "Beautiful peacock-inspired traditional earrings",
+        image_url: "images/logo.png",
+      },
+      {
+        id: 7,
+        name: "Divine Anklet",
+        category: "bracelets",
+        description: "Traditional silver anklet with bell charms",
+        image_url: "images/logo.png",
+      },
+      {
+        id: 8,
+        name: "Royal Choker Necklace",
+        category: "necklaces",
+        description: "Majestic choker necklace fit for royalty",
+        image_url: "images/logo.png",
+      },
+    ];
 
     // Convert products to gallery items
     allItems = products.map((product) => ({

@@ -51,8 +51,43 @@ document.addEventListener("DOMContentLoaded", function () {
 // Load featured products for home page
 async function loadFeaturedProducts() {
   try {
-    const response = await fetch("/api/products?featured=true");
-    const products = await response.json();
+    // Static sample data for GitHub Pages
+    const products = [
+      {
+        id: 1,
+        name: "Heritage Temple Ring",
+        category: "rings",
+        price: 2500,
+        description:
+          "Traditional temple-inspired silver ring with intricate carvings",
+        image_url: "images/logo.png",
+      },
+      {
+        id: 2,
+        name: "Classic Chandelier Earrings",
+        category: "earrings",
+        price: 4200,
+        description:
+          "Elaborate traditional earrings perfect for festive occasions",
+        image_url: "images/logo.png",
+      },
+      {
+        id: 4,
+        name: "Traditional Kada Bracelet",
+        category: "bracelets",
+        price: 3200,
+        description: "Heavy traditional silver kada with embossed patterns",
+        image_url: "images/logo.png",
+      },
+      {
+        id: 6,
+        name: "Peacock Feather Earrings",
+        category: "earrings",
+        price: 3600,
+        description: "Beautiful peacock-inspired traditional earrings",
+        image_url: "images/logo.png",
+      },
+    ];
 
     const container = document.getElementById("featured-products");
     if (!container) return;
@@ -77,8 +112,8 @@ async function loadFeaturedProducts() {
                 <div class="product-info">
                     <h3>${product.name}</h3>
                     <p class="category">${product.category}</p>
-                    <p class="price">$${parseFloat(product.price).toFixed(
-                      2
+                    <p class="price">₹${parseFloat(product.price).toFixed(
+                      0
                     )}</p>
                     <p class="description">${
                       product.description
