@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery - Anuva Taru Silver</title>
+    <link rel="stylesheet" href="/public/css/style.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navbar">
+        <div class="nav-container">
+          <div class="nav-logo">
+            <a
+              href="/"
+              class="logo-link"
+              aria-label="Anuva Taru Silver Gallery"
+            >
+              <img
+                src="/public/images/logo.png"
+                alt="Anuva Taru Silver Logo"
+                class="logo-img"
+                onerror="this.style.display='none'"
+              />
+              <span class="logo-text"> AnuvaTaru Silver </span>
+            </a>
+          </div>
+          <ul class="nav-menu">
+            <li class="nav-item">
+              <a href="/" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="/catalog" class="nav-link">Catalog</a>
+            </li>
+            <li class="nav-item">
+              <a href="/gallery" class="nav-link active">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a href="/contact" class="nav-link">Contact</a>
+            </li>
+          </ul>
+          <div class="nav-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Page Header -->
+      <section class="page-header">
+        <div class="container">
+          <h1>Heritage Gallery</h1>
+          <p>
+            Witness the artistry of traditional Indian silversmithing through
+            our curated visual collection
+          </p>
+        </div>
+      </section>
+
+      <!-- Gallery Filters -->
+      <section class="gallery-filters">
+        <div class="container">
+          <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">
+              All Treasures
+            </button>
+            <button class="filter-btn" data-filter="rings">
+              Heritage Rings
+            </button>
+            <button class="filter-btn" data-filter="necklaces">
+              Temple Necklaces
+            </button>
+            <button class="filter-btn" data-filter="earrings">
+              Chandelier Earrings
+            </button>
+            <button class="filter-btn" data-filter="bracelets">
+              Kada & Bangles
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Gallery Grid -->
+      <section class="gallery">
+        <div class="container">
+          <!-- Debug button to test modal -->
+          <button
+            onclick="testModal()"
+            style="
+              margin-bottom: 20px;
+              padding: 10px;
+              background: var(--traditional-gold);
+              border: none;
+              border-radius: 5px;
+              cursor: pointer;
+            "
+          >
+            Test Modal
+          </button>
+          <div class="gallery-grid" id="gallery-grid">
+            <!-- Gallery items will be loaded here -->
+            <div class="loading">Curating traditional masterpieces...</div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Gallery Modal -->
+    <div id="gallery-modal" class="modal gallery-modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="modal-body">
+          <div class="gallery-modal-image">
+            <img id="gallery-modal-img" src="" alt="Heritage Jewelry" />
+          </div>
+          <div class="gallery-modal-info">
+            <h3 id="gallery-modal-title">Traditional Piece</h3>
+            <p id="gallery-modal-description">
+              A masterpiece of traditional craftsmanship
+            </p>
+            <div class="gallery-modal-actions">
+              <button id="prev-image" class="btn btn-outline">
+                <i class="fas fa-chevron-left"></i> Previous
+              </button>
+              <button id="next-image" class="btn btn-outline">
+                Next <i class="fas fa-chevron-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3><i class="fas fa-gem"></i> Anuva Taru Silver</h3>
+            <p>
+              Crafting beautiful silver jewelry with passion and precision since
+              our beginning.
+            </p>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-pinterest"></i></a>
+            </div>
+          </div>
+          <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="/">Home</a></li>
+              <li><a href="/catalog">Catalog</a></li>
+              <li><a href="/gallery">Gallery</a></li>
+              <li><a href="/contact">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Categories</h4>
+            <ul>
+              <li><a href="/catalog?category=rings">Rings</a></li>
+              <li><a href="/catalog?category=necklaces">Necklaces</a></li>
+              <li><a href="/catalog?category=earrings">Earrings</a></li>
+              <li><a href="/catalog?category=bracelets">Bracelets</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Contact Info</h4>
+            <div class="contact-info">
+              <p><i class="fas fa-envelope"></i> info@anuvataru.com</p>
+              <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+              <p><i class="fas fa-map-marker-alt"></i> Your Address Here</p>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2024 Anuva Taru Silver. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/public/js/gallery.js"></script>
+    <script src="/public/js/main.js"></script>
+  </body>
+</html>
